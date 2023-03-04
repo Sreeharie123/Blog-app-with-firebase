@@ -1,0 +1,17 @@
+
+<app-header (visible)="additem($event)"></app-header>
+<app-category-navbar *ngIf="currenElement"></app-category-navbar>
+<app-category-navbar class="max-md:hidden max-md:fixed max-md:top-0"></app-category-navbar>
+<!-- <app-post-card></app-post-card>
+<app-subscription-form></app-subscription-form> -->
+<div class="min-h-[31.75rem]" [ngClass]="{'max-md:hidden':currenElement}">
+  <router-outlet></router-outlet>
+</div>
+
+
+<div class="px-48 mb-5 mt-5 max-md:px-0 max-md:mt-0 max-md:mb-5" *ngIf="!currenElement">
+  <app-subscription-form></app-subscription-form>
+</div>
+
+<app-footer *ngIf="!currenElement"></app-footer>
+
