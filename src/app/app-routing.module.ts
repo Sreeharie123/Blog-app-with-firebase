@@ -9,8 +9,8 @@ import { TermsAndConditionComponent } from './components/pages/terms-and-conditi
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path:"category/:id",component:SingleCategoryComponent},
-  {path:"post",component:SinglePostsComponent},
+  {path:"category/:category/:id",component:SingleCategoryComponent},
+  {path:"post/:id",component:SinglePostsComponent},
 
   {path:"about",component:AboutUsComponent},
   {path:"term-condition",component:TermsAndConditionComponent},
@@ -19,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], 
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

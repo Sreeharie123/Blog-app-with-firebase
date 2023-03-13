@@ -1,5 +1,5 @@
 <div
-  class="card md:w-[26rem] h-[40rem] shadow-2xl flex flex-col gap-3 bg-slate-100 rounded-xl overflow-hidden max-md:w-full" *ngIf="postData">
+  class="card md:w-[26rem] h-[40rem] shadow-2xl flex flex-col gap-3 bg-slate-100 rounded-xl overflow-hidden max-md:w-full" *ngIf="postData" [routerLink]=" ['/post',postData.id]">
   <img
    src="{{postData.data.postImgPath}}"
     class="w-full h-1/2 object-fill"

@@ -55,4 +55,10 @@ export class PostsService {
       );
 
   }
+
+  loadOnePost(postId:string){
+
+   return this.afs.doc(`posts/${postId}`).valueChanges()
+
+  }
 }
