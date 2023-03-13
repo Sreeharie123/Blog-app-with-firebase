@@ -6,12 +6,12 @@
     <p class="font-serif text-white">Lorem ipsum dolor sit amet consectetur.</p>
   </div>
 
+
   <div class="flex gap-6 flex-wrap">
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+  <div *ngFor="let item of feturedPost">
+    <app-post-card [postData]="item"></app-post-card>
   </div>
+</div>
 </div>
 
 <section class="md:px-40 md:flex md:flex-col md:gap-8 md:mt-8">

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+  import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
@@ -24,3 +24,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
+ 

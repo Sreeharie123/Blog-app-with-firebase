@@ -1,25 +1,22 @@
 <div
-  class="card md:w-[26rem] shadow-2xl flex flex-col gap-3 bg-slate-100 rounded-xl overflow-hidden max-md:w-full"
->
+  class="card md:w-[26rem] h-[40rem] shadow-2xl flex flex-col gap-3 bg-slate-100 rounded-xl overflow-hidden max-md:w-full" *ngIf="postData">
   <img
-    src="https://www.shutterstock.com/image-illustration/oil-painting-conceptual-abstract-picture-260nw-1445018480.jpg"
-    class="w-full object-contain"
+   src="{{postData.data.postImgPath}}"
+    class="w-full h-1/2 object-fill"
   />
 
-  <div class="cardbody px-4">
+  <div class="cardbody px-4 h-1/2 overflow-y-auto">
     <div class="flex gap-4">
-      <span class="font-dm text-rose-600">Design</span>
+      <span class="font-dm text-rose-600">{{postData.data.category.category}}</span>
       <span class="font-dm text-green-600">Featured</span>
-      <span class="font-dm text-blue-600">Views-100,256</span>
+      <span class="font-dm text-blue-600">Views-{{postData.data.views}}</span>
     </div>
-    <h4 class="text-2xl font-bold font-sans mt-3 max-md:-m-2 ">
-      How to start a blog in 2020 editted new category
+    <h4 class="text-xl md:text-2xl font-bold font-sans mt-3">
+           {{postData.data.title}}
     </h4>
     <p class="font-serif text-lg">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla architecto
-      ullam perspiciatis, saepe quo quia ratione cumque sed nostrum a reiciendis
-      earum inventore reprehenderit accusantium illum quod obcaecati qui in!
+     {{postData.data.except}}
     </p>
-    <p class="text-orange-500 m-5">Last Updated Sep 20,2001</p>
+    <p class="text-orange-500 m-5">Last Updated - {{postData.data.createdAt.toMillis()|date}}</p>
   </div>
 </div>
