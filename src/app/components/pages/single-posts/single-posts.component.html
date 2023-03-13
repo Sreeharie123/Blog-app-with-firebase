@@ -6,9 +6,8 @@
         <div class="flex md:gap-6 gap-4">
           <span
             class="font-dm text-rose-600 md:text-xl"
-            [innerHTML]="postData.category.category"
-          ></span>
-          <span class="font-dm text-green-600 md:text-xl">Featured</span>
+          >  {{postData.category.category}}</span>
+          <p class="font-dm text-green-600 md:text-xl">Featured</p>
           <span class="font-dm text-blue-600 md:text-xl"
             >Views-{{ postData.views }}</span
           >
@@ -27,8 +26,7 @@
       <app-comments-list></app-comments-list>
     </div>
   </div>
-  <div class="flex flex-col gap-8 max-md:hidden">
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+  <div class="flex flex-col gap-8 max-md:hidden" *ngFor="let item of similarPost">
+    <app-post-card [postData]="item"></app-post-card>
   </div>
 </section>
