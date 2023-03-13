@@ -29,7 +29,7 @@ export class PostsService {
     .collection('posts',ref=>ref.orderBy ('createdAt'))
     .snapshotChanges()
     .pipe(
-      map((action) => { 
+      map((action) => {
         return action.map((a) => {
           const data = a.payload.doc.data();
           const id = a.payload.doc.id;
@@ -37,6 +37,22 @@ export class PostsService {
         });
       })
     );
+
+  }
+
+  loadCatergoryPosts(categoryId:string ){
+    return this.afs
+      .collection('posts',ref=>ref.where('category.categoryId','==',categoryId))
+      .snapshotChanges()
+      .pipe(
+        map((action) => {
+          return action.map((a) => {
+            const data = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, data };
+          });
+        })
+      );
 
   }
 }
