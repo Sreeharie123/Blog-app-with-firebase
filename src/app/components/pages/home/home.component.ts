@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
@@ -6,17 +6,22 @@ import { PostsService } from 'src/app/services/posts.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   feturedPost:any
-  constructor(private postService:PostsService){
+  lettestPost:any
+  constructor(private postService:PostsService){}
+ngOnInit(): void {
 
-     this.postService.loadFeatured().subscribe((value)=>{
-      this.feturedPost=value
-      console.log(value)
-     })
-  }
+  this.postService.loadFeatured().subscribe((value)=>{
+    this.feturedPost=value
+    console.log(value)
+   })
 
-
+  this.postService.loadLatest().subscribe((value)=>{
+   this.lettestPost=value
+  })
+}
+ 
 
 }

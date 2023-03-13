@@ -11,7 +11,7 @@ export class PostsService {
 
   loadFeatured() {
     return this.afs
-      .collection('posts',ref=>ref.where('isFeatured','==',true))
+      .collection('posts',ref=>ref.where('isFeatured','==',true).limit(4  ))
       .snapshotChanges()
       .pipe(
         map((action) => {
@@ -22,5 +22,21 @@ export class PostsService {
           });
         })
       );
+  }
+
+  loadLatest(){
+    return this.afs
+    .collection('posts',ref=>ref.orderBy ('createdAt'))
+    .snapshotChanges()
+    .pipe(
+      map((action) => { 
+        return action.map((a) => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, data };
+        });
+      })
+    );
+
   }
 }

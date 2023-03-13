@@ -22,11 +22,6 @@
     <p class="font-seri text-white">Lorem ipsum dolor sit amet consectetur.</p>
   </div>
   <div class="flex md:gap-16 flex-wrap md:justify-center">
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
-    <app-post-card></app-post-card>
+    <app-post-card  *ngFor="let item of lettestPost" [postData]="item"></app-post-card>
   </div>
 </section>
