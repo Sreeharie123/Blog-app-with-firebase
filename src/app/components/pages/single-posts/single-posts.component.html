@@ -1,5 +1,5 @@
-<section class="md:mb-10 flex gap-10 md:px-48">
-  <div class="w-[70%] flex flex-col max-md:w-full">
+<section class="md:mb-10 flex gap-10 md:px-48 w-screen">
+  <div class="w-[70%] h-fit flex flex-col max-md:w-full">
     <div class="h-fit shadow-2xl overflow-auto" *ngIf="postData">
       <img src="{{ postData.postImgPath }}" class="w-full object-contain" />
       <div class="cardbody md:px-6 px-4 md:py-6">
@@ -26,7 +26,9 @@
       <app-comments-list></app-comments-list>
     </div>
   </div>
-  <div class="flex flex-col gap-8 max-md:hidden" *ngFor="let item of similarPost">
+  <div class="w-[30%] flex flex-col gap-4">
+  <div class="flex flex-col h-fit  gap-8 max-md:hidden" *ngFor="let item of similarPost">
     <app-post-card [postData]="item"></app-post-card>
   </div>
+</div>
 </section>

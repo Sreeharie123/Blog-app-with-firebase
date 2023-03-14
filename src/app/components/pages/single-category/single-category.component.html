@@ -15,8 +15,10 @@
     <h1 class="font-serif text-3xl font-black text-white">Latest Posts</h1>
     <p class="font-seri text-white">Lorem ipsum dolor sit amet consectetur.</p>
   </div>
+  <div class="w-full flex gap-6 flex-wrap px-32 py-3">
   <div class="flex md:gap-16 flex-wrap md:justify-center" *ngFor="let item of postsArray">
     <app-post-card [postData]="item"></app-post-card>
   </div>
+</div>
 </section>
 
