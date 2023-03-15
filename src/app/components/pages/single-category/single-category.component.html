@@ -1,4 +1,4 @@
-<div class="md:bg-gradient-to-r from-teal-700 to-[#052d70] ">
+<div class="md:bg-gradient-to-r from-teal-700 to-[#052d70]">
   <div class="flex flex-col md:gap-2 md:pl-48 md:py-20 pl-6 max-md:bg-black">
     <h1 class="text-white font-lora md:text-4xl text-xl">{{categoryObj.category}}</h1>
     <P class="text-white font-serif text-lg flex gap-2">More Details<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -8,14 +8,14 @@
   </div>
 </div>
 
-<section class="md:px-40 md:flex md:flex-col md:gap-8 md:mt-8">
+<section class="md:flex md:flex-col md:gap-8 md:mt-8 md:px-40 flex-col">
   <div
     class="flex flex-col items-center bg-gradient-to-r from-teal-700 to-[#052d70] md:rounded-tr-full md:rounded-bl-full p-2"
   >
     <h1 class="font-serif text-3xl font-black text-white">Latest Posts</h1>
-    <p class="font-seri text-white">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="font-seri text-white">Latest Post are here....!</p>
   </div>
-  <div class="w-full flex gap-6 flex-wrap px-32 py-3">
+  <div class="w-full flex gap-6 flex-wrap md:px-32 py-3">
   <div class="flex md:gap-16 flex-wrap md:justify-center" *ngFor="let item of postsArray">
     <app-post-card [postData]="item"></app-post-card>
   </div>

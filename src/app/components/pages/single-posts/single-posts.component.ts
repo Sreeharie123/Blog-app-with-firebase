@@ -19,7 +19,9 @@ export class SinglePostsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((value: any) => {
 
-      // this.postService.countViews(value.id); 
+
+
+      // this.postService.countViews(value.id);
       this.postService.loadOnePost(value.id).subscribe((post) => {
         this.postData = post;
         this.loadSimilarPost(this.postData.category.categoryId)
@@ -28,6 +30,7 @@ export class SinglePostsComponent implements OnInit {
 
 
   }
+
 
   loadSimilarPost(categoryId:string){
     this.postService.loadSimilar(categoryId ).subscribe((value)=>{

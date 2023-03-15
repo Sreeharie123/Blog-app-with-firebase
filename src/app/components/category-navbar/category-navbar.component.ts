@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
 
 @Component({
@@ -12,6 +12,8 @@ export class CategoryNavbarComponent implements OnInit{
 
   categoryArray:any
 
+
+
 ngOnInit(): void {
   this.categoryService.loadData().subscribe((value)=>{
 
@@ -19,6 +21,16 @@ ngOnInit(): void {
   })
 
 }
+
+trueelement:boolean=true
+
+  @Output()visible=new EventEmitter()
+
+
+  additem(element:boolean){
+  this.trueelement=!element
+   this.visible.emit(this.trueelement)
+  }
 
 
 }

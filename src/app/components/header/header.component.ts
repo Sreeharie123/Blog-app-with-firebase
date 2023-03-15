@@ -11,7 +11,6 @@ trueelement:boolean=true
 
   @Output()visible=new EventEmitter()
 
-
   additem(element:boolean){
   this.trueelement=!element
    this.visible.emit(this.trueelement)

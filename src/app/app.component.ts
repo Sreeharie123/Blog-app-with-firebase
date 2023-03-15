@@ -12,4 +12,9 @@ export class AppComponent {
   additem(element:boolean){
        this.currenElement=element
   }
+
+  item(value:boolean){
+
+     this.currenElement=value
+  }
 }

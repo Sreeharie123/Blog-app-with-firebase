@@ -1,9 +1,9 @@
 <div
-  class="h-fit py-20 bg bg-slate-200 shadow-xl flex flex-col justify-center items-center gap-9 rounded-2xl max-md:hidden relative"
+  class="h-fit py-20 bg bg-slate-200 shadow-xl flex flex-col justify-center items-center gap-9 rounded-2xl relative"
 >
   <div class="w-fit flex flex-col justify-center items-center gap-4">
-    <h1 class="font-mono text-3xl text-gray-600">SUBSCRIPTION FORM</h1>
-    <P class="px-28 font-serif">
+    <h1 class="font-sans text-xl md:text-2xl text-gray-600">SUBSCRIPTION FORM</h1>
+    <P class="md:px-28 px-4 font-serif">
       A blog app is a web or mobile application that allows users to create and
       publish their own blog posts, as well as read and comment on posts by
       other users. The app typically includes features such as user
@@ -17,16 +17,16 @@
       provide an easy-to-use platform for users to express themselves and share
       their thoughts, ideas, and experiences with a wider audience.
     </P>
-    <div class="w-full h-16 bg-red-200 text-red-600 flex items-center justify-center text-3xl" *ngIf="istrue">Email is already loging</div>
-    <div class="w-full h-16 bg-green-200 text-green-600 flex items-center justify-center text-3xl" *ngIf="issub ">Suscribe is Successfully completed</div>
+    <div class="w-full h-16 bg-red-200 text-red-600 flex items-center justify-center md:text-3xl" *ngIf="istrue">Email is already loging</div>
+    <div class="w-full h-16 bg-green-200 text-green-600 flex items-center justify-center md:text-3xl" *ngIf="issub ">Suscribe is Successfully completed</div>
 
   </div>
   <form #subForm="ngForm" (ngSubmit)="onSubmit(subForm)" *ngIf="!issub">
-    <div class="flex justify-center gap-4">
+    <div class="flex flex-col max-md:w-screen max-md:px-4 items-center md:flex-row justify-center gap-4">
       <input
         type="text"
         placeholder="Your name"
-        class="w-1/3 h-16 pl-6 rounded-md"
+        class="md:w-1/3 w-full h-16 pl-6 rounded-md"
         name="name"
         #Name="ngModel"
         ngModel
@@ -46,7 +46,7 @@
       <input
         type="email"
         placeholder="Email Address"
-        class="w-1/3 h-16 pl-6 rounded-md"
+        class="md:w-1/3 w-full h-16 pl-6 rounded-md"
         name="email"
         #Email="ngModel"
         ngModel
@@ -74,7 +74,7 @@
     </div>
   </form>
 </div>
-
+<!--
 <div class="md:hidden">
   <dir class="-ml-5">
     <h1 class="font-black">SUBSCRIPTION FORM</h1>
@@ -100,4 +100,4 @@
       </button>
     </div>
   </div>
-</div>
+</div> -->
