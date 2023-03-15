@@ -1,6 +1,6 @@
- <nav>
-  <div class="h-16 flex gap-5 md:gap-10 md:justify-center md:flex-row flex-col max-md:h-screen max-md:bg-slate-300 max-md:w-1/2 max-md:overflow-hidden">
-      <ul class="text-lg text-green-600 flex items-center ml-4" *ngFor="let item of categoryArray">
+ <nav class="md:bg-blue-100 bg-slate-900">
+  <div class="h-16 flex gap-2 md:gap-10 md:justify-center md:flex-row flex-col max-md:h-screen max-md:bg-slate-100 max-md:w-1/2 max-md:overflow-hidden">
+      <ul class="text-lg text-blue-700 flex items-center ml-4 max-md:w-40 h-12 max-md:flex max-md:justify-center max-md:rounded max-md:bg-slate-300" *ngFor="let item of categoryArray">
         <li class="whitespace-nowrap cursor-pointer hover:text-red-600" [routerLink]=" ['/category',item.data.category,item.id]" (click)="additem(trueelement)"><a>{{item.data.category}}</a></li>
       </ul>
   </div>
