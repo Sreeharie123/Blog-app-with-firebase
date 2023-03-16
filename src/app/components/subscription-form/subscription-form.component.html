@@ -1,8 +1,8 @@
 <div
-  class="h-fit py-20 bg bg-slate-200 shadow-xl flex flex-col justify-center items-center gap-9 rounded-2xl relative"
+  class="h-fit md:py-20 py-10 bg bg-slate-200 shadow-xl flex flex-col justify-center items-center gap-9 md:rounded-2xl relative"
 >
   <div class="w-fit flex flex-col justify-center items-center gap-4">
-    <h1 class="font-sans text-xl md:text-2xl text-gray-600">SUBSCRIPTION FORM</h1>
+    <h1 class="text-xl md:text-2xl text-gray-600">SUBSCRIPTION FORM</h1>
     <P class="md:px-28 px-4 font-serif">
       A blog app is a web or mobile application that allows users to create and
       publish their own blog posts, as well as read and comment on posts by
@@ -33,7 +33,7 @@
         required
       />
       <div
-        class="bg-red-100 border border-red-400 text-red-700 px-14 py-4 rounded absolute top-[23rem] left-96"
+        class="w-fit h-fit text-red-700 px-14 py-4 rounded absolute top-[23rem] left-96"
         role="alert"
         *ngIf="Name.touched && Name.invalid"
       >
@@ -55,7 +55,7 @@
       />
 
       <div
-        class="bg-red-100 border border-red-400 text-red-700 px-14 py-4 rounded absolute top-[23rem] right-[38rem]"
+        class="text-red-700 w-fit h-fit px-14 py-4 rounded absolute top-[23rem] right-[38rem]"
         role="alert"
         *ngIf="Email.touched && Email.invalid"
       >

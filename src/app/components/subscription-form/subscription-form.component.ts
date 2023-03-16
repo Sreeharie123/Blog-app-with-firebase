@@ -27,6 +27,7 @@ export class SubscriptionFormComponent implements OnInit {
       if (value.empty) {
         this.subscribeService.addSubs(subData, form);
         this.issub=true
+        this.istrue=false
       } else {
         this.tostr.warning('Email is allready subscribed');
         this.istrue = true;
