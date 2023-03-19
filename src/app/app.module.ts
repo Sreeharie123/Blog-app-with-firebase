@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 
 
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommentsFormComponent,
     CommentsListComponent,
     AboutUsComponent,
-    PostCardComponent
+    PostCardComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,
