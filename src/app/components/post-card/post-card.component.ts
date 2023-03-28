@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-post-card',
@@ -11,6 +12,8 @@ export class PostCardComponent implements OnInit{
 
   ngOnInit(){
     console.log(this.postData)
+    AOS.init();
+
   }
 
 
