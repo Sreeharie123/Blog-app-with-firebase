@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -15,5 +15,32 @@ trueelement:boolean=true
   this.trueelement=!element
    this.visible.emit(this.trueelement)
   }
+
+
+  isTrue:boolean=false
+
+  open(booleanData:boolean){
+    this.isTrue=!booleanData
+  }
+
+  buttonClick(data:boolean){
+    this.isTrue=!data
+  }
+
+
+
+darkNav:boolean=false
+
+@HostListener('document:scroll')
+
+onScroll(){
+if(document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
+
+  this.darkNav=true
+}else{
+  this.darkNav=false
+}
+}
+
 
 }

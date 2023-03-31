@@ -1,9 +1,6 @@
 
-<app-header (visible)="additem($event)"></app-header>
-<app-category-navbar *ngIf="currenElement" (visible)="item($event)"></app-category-navbar>
-<app-category-navbar class="max-md:hidden"></app-category-navbar>
-
-
+<app-header></app-header>
+<app-category-navbar></app-category-navbar>
 
 <div class="min-h-[31.75rem]" [ngClass]="{'max-md:hidden':currenElement}">
   <router-outlet></router-outlet>

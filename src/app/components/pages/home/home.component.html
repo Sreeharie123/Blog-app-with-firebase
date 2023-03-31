@@ -3,13 +3,14 @@
 <div id="feature"
   class="bg-slate-100 md:m-5 shadow-md rounded-lg p-16 flex flex-col flex-wrap gap-8 max-md:w-full max-md:p-0 max-md:gap-2"
 >
-  <div class="flex flex-col items-center">
-    <h1 class="font-serif text-3xl font-black text-black">Featured Posts</h1>
-    <p class="font-serif">Featured post are here....!</p>
-  </div>
+<div class="flex items-center justify-center relative" id="about">
+  <h1 class="md:text-8xl text-5xl font-bold text-[#cfe2f2]">BLOG APP</h1>
+  <P class="md:text-3xl text-xl font-bold text-gray-900 absolute md:top-7 top-3"
+    ><span class="border-b-4 md:px-2 border-blue-700">Featured</span>Post</P
+  >
+</div>
 
-
-  <div class="flex gap-6 flex-wrap">
+  <div class="flex gap-6 flex-wrap" id="feature">
   <div *ngFor="let item of feturedPost">
     <app-post-card [postData]="item"></app-post-card>
   </div>
@@ -17,11 +18,11 @@
 </div>
 
 <section class="md:px-40 md:flex md:flex-col md:gap-8 md:mt-8">
-  <div
-    class="flex flex-col items-center bg-gradient-to-r from-teal-700 to-[#052d70] md:rounded-tr-full md:rounded-bl-full p-2"
-  >
-    <h1 class="font-serif text-3xl font-black text-white">Latest Posts</h1>
-    <p class="font-seri text-white">Letest posts are here..!</p>
+  <div class="flex items-center justify-center relative" id="about">
+    <h1 class="md:text-8xl text-5xl font-bold text-[#cfe2f2]">BLOG APP</h1>
+    <P class="md:text-3xl text-xl font-bold text-gray-900 absolute md:top-8 top-3"
+      ><span class="border-b-4 md:px-2 border-blue-700">Latest</span>Post</P
+    >
   </div>
   <div class="flex md:gap-16 flex-wrap md:justify-center">
     <app-post-card  *ngFor="let item of lettestPost" [postData]="item"></app-post-card>
